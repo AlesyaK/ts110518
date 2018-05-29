@@ -1,3 +1,4 @@
+"use strict";
 // 1)
 // Написать функцию isInArray(), которая начиная со второго принимает переменное количество аргументов.
 //     Возвращает true, если все аргументы, кроме первого входят в первый.
@@ -8,7 +9,7 @@ var isInArray = function (sArr) {
         rest[_i - 1] = arguments[_i];
     }
     var flag = true;
-    if (!Array.isArray(sArr) || !rest.length) {
+    if (!rest.length) {
         flag = false;
     }
     else {
